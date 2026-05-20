@@ -1,0 +1,98 @@
+{% extends 'admin_dashboard.html' %}
+{% block title %}View Results - Zeon Skill{% endblock %}
+
+{% block main %}
+
+      <!--categories table-->
+      <div class="d-flex flex-row justify-content-between">
+        <h3 class="Categories">User Result Details</h3>
+        <!-- Button trigger modal -->
+        <a href="{{ url_for('admin_skillresults') }}">
+        <button
+          type="button"
+          class="btn btn-secondary h-75"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Back
+        </button>
+        </a>
+      </div>
+      
+
+    <div class="skills-card mb-3">
+        <div class="section-header mb-4">
+            <h5>User Information</h5>
+        </div>
+        <div class="d-flex flex-wrap gap-custom">
+            <div>
+                <p><b>Name:</b> Ali Khan</p>
+                <p><b>Email:</b> ali@example.com</p>
+                <p><b>category:</b> Programming & Frameworks</p>
+            </div>
+            <div>
+                <p><b>Skill/Test:</b> Javascript</p>
+                <p><b>Level:</b> Intermediate</p>
+                <p><b>Date:</b> 03 sep 2025</p>
+            </div>
+           
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+  <div class="row g-3 mb-3">
+    <div class="col-md-4">
+      <div class="card p-4 text-center ">
+        <h4><b>32/40</b></h4>
+        <h6>Score</h6>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-4 text-center">
+        <h4><b>80%</b></h4>
+        <h6>Percentage</h6>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-4 text-center">
+        <h4><b>Pass</b></h4>
+        <h6>Status</h6>
+      </div>
+    </div>    
+  </div>
+
+  <!--Accordian-->
+  <div class="accordion accordion-flush mb-3" id="accordionFlushExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Accordion Item #1
+        </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item’s accordion body.</div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Accordion Item #2
+        </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item’s accordion body. Let’s imagine this being filled with some actual content.</div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Accordion Item #3
+        </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+        </div>
+    </div>
+  </div>
+
+      {% endblock %}
